@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color:  rgb(255, 195, 43);
+}
+
+.menu {
+  border: 1px solid black;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background-color: rgb(255, 195, 43);
+}
+
+.nav-items {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.medium {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+button {
+  border-radius: 30px;
+  padding: 5px 10px;
+}

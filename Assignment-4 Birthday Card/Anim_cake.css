@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  overflow: hidden;
+ 
+}
+
+@keyframes cardZoom {
+  0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes rotateOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Balloon Orbiting Image */
+.orbit-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--orbit-size, 500px);
+  height: var(--orbit-size, 500px);
+  margin-left: calc(var(--orbit-size, 500px) / -2);
+  margin-top: calc(var(--orbit-size, 500px) / -2);
+  animation: rotateOrbit var(--orbit-speed, 10s) linear infinite;
+  z-index: 4; /* behind the card */
+  pointer-events: none;
+  /* Start at a custom angle */
+  transform: translate(-50%, -50%) rotate(var(--orbit-angle, 0deg));
+}
+
+.orbit-balloon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  /* Optional: Add a drop shadow for more overlap effect */
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+  z-index: 5;
+}
+
+/* Card Container */
+.bigbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 450px;
+  border: 4px solid rgb(219, 44, 44);
+  background: linear-gradient(to right, rgb(239, 224, 227), pink, rgb(199, 107, 199));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 5px 20px gray;
+  border-radius: 15px;
+  animation: cardZoom 1s ease-out forwards;
+  
+}
+
+/* Static Balloon on top */
+.oval {
+  align-self: flex-end;
+  border: 2px solid rgb(174, 18, 164);
+  width: 60px;
+  height: 60px;
+  border-radius: 80%;
+  background-color: rgb(207, 122, 207);
+  position: absolute;
+  top: -30px;
+  right: -25px;
+  box-shadow: 5px 5px 5px gray;
+  animation: bounce 2s infinite ease-in-out;
+  z-index: 11;
+}
+
+.msg {
+  padding-top: 30px;
+  font-size: 22px;
+  background: linear-gradient(to right, blue, black, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.cake-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.cake {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 25%;
+  animation: bounce 1.5s infinite;
+}
+
+.wish1, .wish2 {
+  text-align: center;
+  font-size: 14px;
+  margin: 10px;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.wish1 {
+  animation-delay: 1.2s;
+}
+
+.wish2 {
+  animation-delay: 2s;
+  border: 2px dotted red;
+  padding: 8px;
+  border-radius: 10px;
+  background: #fff5f5;
+}
+
+button {
+  position: relative;
+  margin: 10px;
+  padding: 8px 12px;
+  background-color: rgb(244, 137, 173);
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(227, 132, 148);
+}
