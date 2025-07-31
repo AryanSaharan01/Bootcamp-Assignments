@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #4CAF50, #2196F3);
+    background: linear-gradient(to right, #072945dc, #0d6971d8);
 }
 
 .container {
@@ -13,10 +13,10 @@ body {
 }
 
 .weather-card {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.152);
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.625);
     transition: transform 0.3s ease-in-out;
     width: 450px;
 }
@@ -45,7 +45,7 @@ body {
 
 #city-input-btn {
     padding: 10px;
-    background-color: #2196F3;
+    background-color: #f3aa21;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -54,7 +54,8 @@ body {
 }
 
 #city-input-btn:hover {
-    background-color: #1565C0;
+    background-color: #15c076;
+    transition: 0.5s ease-in-out;
 }
 
 #weather-info {
@@ -79,10 +80,10 @@ body {
 
 #wind-speed {
     font-size: 16px;
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 #date {
     font-size: 14px;
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
 }
