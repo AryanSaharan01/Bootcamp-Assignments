@@ -1,0 +1,36 @@
+/* src/components/SamplePage.css */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.theme-switcher {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.theme-switcher button {
+  padding: 8px 16px;
+}
+
+.theme-switcher button.active {
+  font-weight: bold;
+  transform: scale(1.05);
+}

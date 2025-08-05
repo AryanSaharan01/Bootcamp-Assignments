@@ -1,0 +1,20 @@
+/* src/global.css */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.header {
+  background-color: var(--header-bg);
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.button-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
