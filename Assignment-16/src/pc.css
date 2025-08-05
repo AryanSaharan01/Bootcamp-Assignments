@@ -1,0 +1,115 @@
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem;
+        }
+        .id-card-container {
+            perspective: 1000px;
+        }
+        .id-card {
+            background: linear-gradient(135deg, #0c1dd4 0%, #97afe5 100%);
+            color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            padding: 2rem;
+            transition: transform 0.6s;
+            position: relative;
+            cursor: pointer;
+        }
+        .profile-photo {
+            width: 400px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .profile-photo:hover {
+            transform: scale(1.1);
+            border-color: #44196d;
+        }
+        .name {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+        }
+        .title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #e5e7eb;
+            margin: 0.5rem 0 1.5rem;
+        }
+        .section-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #9ca3af;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #6c1d7b;
+            padding-bottom: 0.25rem;
+        }
+        .details-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .details-list li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        .details-list li .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.75rem;
+            color: #60a5fa;
+        }
+        .contact-info a {
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #caa7d4;
+        }
+        .edit-button {
+            background-color: #d5b5eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.75rem;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .edit-button:hover {
+            background-color: #662892;
+        }
+        .edit-fields {
+            margin-top: 1.5rem;
+            display: none; /* Initially hidden */
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .edit-fields label {
+            font-size: 0.875rem;
+            color: #e5e7eb;
+        }
+        .edit-fields input {
+            background-color: purple;
+            border: 1px solid purple;
+            border-radius: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            color: #ffffff;
+        }
+ 
